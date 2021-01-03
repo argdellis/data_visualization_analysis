@@ -1,0 +1,1 @@
+spinBox_xTicksRotation

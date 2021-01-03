@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1110</width>
+    <height>813</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icons/fugue-icons-3.5.6/icons-shadowless/function.png</normaloff>../icons/fugue-icons-3.5.6/icons-shadowless/function.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="plot">
+       <attribute name="title">
+        <string>plot</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QWidget" name="mplwindow" native="true">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="mplvl"/>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>table</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QTableView" name="tableView_dataTable">
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QToolBox" name="toolBox">
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>1200</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_plot_options">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>250</width>
+         <height>627</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Plot Options</string>
+       </attribute>
+       <widget class="QComboBox" name="comboBox_x_axis_data">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>15</y>
+          <width>220</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>220</width>
+          <height>25</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_y_axis_data">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>220</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>220</width>
+          <height>25</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_x_axis_data">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>x axis data</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_y_axis_data">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>45</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>y axis data</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_x_ticks_rotation">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>165</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>x ticks labels rotation (deg)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_y_ticks_rotation">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>145</y>
+          <width>165</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>y ticks labels rotation (deg)</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="spinBox_x_ticks_rotation">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>115</y>
+          <width>71</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>-180</number>
+        </property>
+        <property name="maximum">
+         <number>180</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="spinBox_y_ticks_rotation">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>159</y>
+          <width>71</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>-180</number>
+        </property>
+        <property name="maximum">
+         <number>180</number>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_other_options">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>250</width>
+         <height>627</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Other Options</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="page_file_info">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>250</width>
+         <height>627</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>File Info</string>
+       </attribute>
+       <widget class="QTextEdit" name="textEdit_filePath">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>211</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_filePath">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Path:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_fileSize">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>140</y>
+          <width>71</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Size(MB):</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="textEdit_fileSize">
+        <property name="geometry">
+         <rect>
+          <x>82</x>
+          <y>140</y>
+          <width>141</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>None</string>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="textEdit_fileColumns">
+        <property name="geometry">
+         <rect>
+          <x>82</x>
+          <y>180</y>
+          <width>141</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>None</string>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_fileColumns">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>180</y>
+          <width>71</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Columns:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="textEdit_fileRows">
+        <property name="geometry">
+         <rect>
+          <x>82</x>
+          <y>220</y>
+          <width>141</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>None</string>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_fileRows">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>220</y>
+          <width>71</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Lines:</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1110</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen_File"/>
+   <addaction name="actionCreate_Plot"/>
+  </widget>
+  <action name="actionOpen_File">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/fugue-icons-3.5.6/icons/folder-open-document.png</normaloff>../icons/fugue-icons-3.5.6/icons/folder-open-document.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open File</string>
+   </property>
+   <property name="toolTip">
+    <string>select file to open</string>
+   </property>
+  </action>
+  <action name="actionCreate_Plot">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/fugue-icons-3.5.6/icons/chart.png</normaloff>../icons/fugue-icons-3.5.6/icons/chart.png</iconset>
+   </property>
+   <property name="text">
+    <string>Create Plot</string>
+   </property>
+   <property name="toolTip">
+    <string>make a  new plot</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
